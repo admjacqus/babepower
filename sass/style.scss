@@ -29,21 +29,13 @@ video::-webkit-media-controls {
   display: none !important;
 }
 
-$pink: #fd75a4;
-$light: #fed7d8;
-$yellow: #fed731;
-.std {
-  background: transparent;
-}
-
 body {
-  // background: $pink;
   background: url('https://media.missguided.co.uk/image/upload/w_600/v1528805931/smoke1_tedvf5.jpg') top;
   background-size: cover;
 }
 
 .clouds {
-  padding: 10% 0;
+  padding: 5% 0;
   h1,
   h2,
   h3,
@@ -72,15 +64,14 @@ body {
     display: block;
     margin: 2em auto 0;
     padding: .75em 1.5em;
-    &:hover {
-      border-color: $yellow;
-      background: $yellow;
-      color: $pink;
-    }
+    transition: all ease 300ms;
   }
   h3 {
     margin: 3em 0 1em;
     text-transform: none;
+    &.intro {
+      margin-bottom: 3em;
+    }
   }
   .flex {
     display: flex;
@@ -99,7 +90,7 @@ body {
       max-width: 50%;
       h1,
       h2 {
-        font-size: 50px;
+        font-size: 40px;
         margin-bottom: .5em;
       }
       p {
@@ -111,7 +102,12 @@ body {
       }
       transition: background ease 300ms;
       &:hover {
-        background: rgba(255, 255, 255, .15)
+        background: rgba(255, 255, 255, .15);
+        button.cta {
+          border-color: #941862;
+          background: #941862;
+          color: white;
+        }
       }
     }
   }
@@ -119,7 +115,6 @@ body {
 
 @media (min-width: 768px) {
   body {
-    // background: $pink;
     background: url('https://media.missguided.co.uk/image/upload/w_600/v1528805931/smoke1_tedvf5.jpg') top;
     background-size: 300% 300%;
     background-repeat: no-repeat;
@@ -175,7 +170,7 @@ body {
     .flex .slot {
       flex: 600px;
       max-width: 100%;
-      margin: 10px 0; // background: rgba(255, 255, 255, .05);
+      margin: 10px 0;
       h1,
       h2 {
         font-size: 10vw;
