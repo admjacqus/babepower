@@ -1,0 +1,674 @@
+<style>
+/*break out!*/
+.main-container {
+	max-width: 3000px;
+	padding-left: 0;
+	padding-right: 0;
+	margin-left: 0;
+	margin-right: 0;
+}
+/*no breadcrumb navigation*/
+.breadcrumbs, .top-promos-wrapper, .flexslider--home-promos {
+	display: none;
+}
+.main {
+	padding-top: 0;
+}
+main.col-main {
+    max-width: 2000px;
+    margin: 0 auto;
+}
+.footer-container {
+	margin-top: 0;
+}
+/* FONT */
+h1, h2, h3, h4, h5, h6 {
+	-webkit-font-smoothing: antialiased;
+	-webkit-user-select: none;
+	/* Chrome all / Safari all */
+	-moz-user-select: none;
+	/* Firefox all */
+	-ms-user-select: none;
+	/* IE 10+ */
+	user-select: none;/* Likely future */
+}
+a:visited, a:hover {
+	text-decoration: none;
+}
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: top;
+}
+/* width: 100% keeps imgs within container */
+.imgContainer img, .imgContainer video {
+	user-drag: none;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	width: 100%;
+}
+#preloader {
+    position: absolute;
+    z-index: 101;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: #D4A7A4;
+    color: white;
+}
+	#preloader h4 {
+    width: 100%;
+    top: 50%;
+    position: absolute;
+    text-align: center;
+}
+body {
+	font-weight: 700;
+	background: #f1dcd7;
+}
+.col-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.mb5{margin-bottom: 100px;}
+.col {
+	flex: 1 0 384px;
+	overflow: hidden;
+}
+#title {
+	text-align: center;
+	font-size: 15em;
+	line-height: 200px;
+	margin-top: 15%;
+	margin-bottom: 100px;
+}
+.copy {
+	font-size: 22px;
+	text-align: center;
+}
+.justify {
+	text-align: justify;
+}
+.text-shadow {
+	text-shadow: 0 1px 10px rgba(0,0,0,.2)
+}
+#pin1 {
+	position: relative;
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+	overflow: visible;
+	padding-top: 1px;
+	z-index: 100;
+	color: white;
+}
+#pin1 p {
+	padding: 1em;
+	margin: 0 auto;
+	min-width: 200px;
+	max-width: 500px;
+}
+#pin1 button.button {
+	margin-top: 100px;
+}
+.background {
+	position: relative;
+	width: 100%;
+	background: url(https://media.missguided.co.uk/image/upload/v1493120917/babepower/bg_1920.jpg);
+	background-size: cover;
+	background-position-x: center;
+	background-position-y: 0;
+	margin-top: -50vh;
+}
+.background.fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin-top: 0;
+}
+.background, .intro {
+	height: 100%;
+	width: 100%;
+	max-height: 1000px;
+	min-height: 1000px;
+	overflow-y: hidden;
+}
+section {
+	height: 2000px;
+}
+.spacer {
+	text-align: center;
+	min-height: 750px;
+}
+.spacer.s25 {
+	min-height: 250px;
+}
+.spacer.s_viewport {
+	min-height: 100%;
+}
+
+#commands {
+	position: fixed;
+    width: 100%;
+	text-align: center;
+	color: white;
+	font-size: 3.5em;
+	
+	transition: opacity .5s ease;
+}
+#quote_img {
+	width: 500px;
+	height: 500px;
+	margin-top: -100px;
+	/*left: 50%!important;
+    margin-left: -250px!important;*/
+
+	z-index: -1;
+	transition: opacity .25s ease;
+}
+#quotes {
+	padding: 1em;
+	margin: 0 auto;
+	min-width: 200px;
+	max-width: 750px;
+}
+#quotes h2 {
+    color: white;
+    font-size: 80px;
+    text-align: center;
+    transition: all .5s ease;
+}
+.quote {
+	opacity: 0;
+	transition: all .5s ease;
+}
+.decimal {
+	font-size: .5em;
+}
+	
+
+@media only screen and (min-width: 600px) {
+.scrollmagic-pin-spacer {
+	left: 50%!important;
+	margin-left: -250px!important;
+}
+}
+@media only screen and (width: 768px) {
+.background, .intro {
+    max-height: 1030px;
+}
+#title {
+	font-size: 15em;
+	line-height: 1em;
+	margin: 15% 0;
+}
+.col.pad5{padding:5%;}
+}
+@media only screen and (max-width: 767px) {
+.main-container .main > :not(.toolbar-container) {
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 0;
+}
+	.reverse{
+		flex-wrap: wrap-reverse;	
+		}
+}
+@media only screen and (max-width: 767px) {
+#title {
+	font-size: 10em;
+	line-height: 1em;
+	margin-top: 30%;
+}
+#pin1 p {
+	padding: 1em 3em;
+}
+	
+.background {
+	background: url(https://media.missguided.co.uk/image/upload/v1493140446/babepower/mob_bg_2.jpg);
+	background-size: cover;
+    background-position-x: 50%;
+}
+.mb5 {margin-bottom: 0;}
+#commands {font-size: 2.5em;}
+#quotes h2 {font-size: 60px;}
+}
+
+	@media only screen and (max-width: 600px) {
+	.col.pad5{padding:5%;}
+		#quote_img {
+			height: auto;
+    transform: scale(.75);
+}
+
+	}
+	@media only screen and (max-width: 500px) {
+		#quote_img {transform: scale(.95);}
+	}
+	@media only screen and (max-width: 414px) {
+#quotes h2 {
+    font-size: 57px;
+}
+		#quote_img {
+    transform: scale(.9)translateY(10%);
+}
+	}
+	@media only screen and (max-width: 375px) {
+		#title {
+    font-size: 8em;
+    margin-bottom: 50px;
+		}
+#commands {
+    font-size: 2em;
+}
+	#quotes h2 {
+    font-size: 55px;
+}
+		#quote_img {
+		transform: scale(.9)translateY(20%);
+		}
+	}
+	@media only screen and (max-width: 360px) {
+			.hide-on-desk{display:block}
+		.hide-on-mob{display:none}
+	}
+	@media only screen and (min-width: 360px) {
+		.hide-on-desk{display:none}
+		.hide-on-mob{display:block}
+
+	}
+	
+</style>
+<script>
+// init controller
+var controller = new ScrollMagic.Controller();
+</script>
+ <div id="preloader">
+  <h4>loading...</h4>
+</div>
+<div id="trigger1"></div>
+<div id="pin1" class="intro">
+  <h1 id="title">babe power</h1>
+  <p class="copy text-shadow">Introducing our debut fragrance #babepower,</p>
+  <p class="copy text-shadow">with notes of vanilla, orange blossom, peony and jasmine our official babe scent is certain to help you slay all day.</p><p class="copy text-shadow">Get your #babepower now.</p>
+  <div class="col-container"><a href="/babe-power-eau-de-parfum-80-ml">
+    <button class="button">shop now</button>
+    </a></div>
+</div>
+<div id="bg" class="background"></div>
+<script>
+	// create a scene
+new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 1000})
+    //.setPin("#trigger1") // pins the element for the the scene's duration
+	.setClassToggle("#bg", "fixed") // add class toggle
+    .addTo(controller); // assign the scene to the controller
+</script>
+<div id="trigger2"></div>
+<a href="/babe-power-eau-de-parfum-80-ml">
+<div class="col-container reverse">
+  <div class="col"> <img src="https://media.missguided.co.uk/image/upload/v1493120917/babepower/img1.jpg" alt=""> </div>
+  <div class="col">
+    <div id="imagesequence"> <img id="myimg" src="https://media.missguided.co.uk/image/upload/v1493112685/babepower/drip00.jpg"><br>
+    </div>
+  </div>
+</div>
+</a>
+<script>
+// define images
+var images  = ["https://media.missguided.co.uk/image/upload/v1493112685/babepower/drip00.jpg", "https://media.missguided.co.uk/image/upload/v1493112685/babepower/drip01.jpg", "https://media.missguided.co.uk/image/upload/v1493112685/babepower/drip02.jpg", "https://media.missguided.co.uk/image/upload/v1493112686/babepower/drip03.jpg", "https://media.missguided.co.uk/image/upload/v1493112686/babepower/drip04.jpg", "https://media.missguided.co.uk/image/upload/v1493112687/babepower/drip05.jpg", "https://media.missguided.co.uk/image/upload/v1493112686/babepower/drip06.jpg", "https://media.missguided.co.uk/image/upload/v1493112687/babepower/drip07.jpg", "https://media.missguided.co.uk/image/upload/v1493112687/babepower/drip08.jpg", "https://media.missguided.co.uk/image/upload/v1493112688/babepower/drip09.jpg", "https://media.missguided.co.uk/image/upload/v1493112687/babepower/drip10.jpg", "https://media.missguided.co.uk/image/upload/v1493112687/babepower/drip11.jpg", "https://media.missguided.co.uk/image/upload/v1493112687/babepower/drip12.jpg", "https://media.missguided.co.uk/image/upload/v1493112688/babepower/drip13.jpg", "https://media.missguided.co.uk/image/upload/v1493112688/babepower/drip14.jpg", "https://media.missguided.co.uk/image/upload/v1493112689/babepower/drip15.jpg", "https://media.missguided.co.uk/image/upload/v1493112688/babepower/drip16.jpg", "https://media.missguided.co.uk/image/upload/v1493112690/babepower/drip17.jpg", "https://media.missguided.co.uk/image/upload/v1493112690/babepower/drip18.jpg", "https://media.missguided.co.uk/image/upload/v1493112684/babepower/drip19.jpg", "https://media.missguided.co.uk/image/upload/v1493112685/babepower/drip20.jpg", "https://media.missguided.co.uk/image/upload/v1493112685/babepower/drip21.jpg", "https://media.missguided.co.uk/image/upload/v1493112685/babepower/drip22.jpg", "https://media.missguided.co.uk/image/upload/v1493112685/babepower/drip23.jpg", "https://media.missguided.co.uk/image/upload/v1493112685/babepower/drip24.jpg", "https://media.missguided.co.uk/image/upload/v1493112688/babepower/drip25.jpg", "https://media.missguided.co.uk/image/upload/v1493112686/babepower/drip26.jpg", "https://media.missguided.co.uk/image/upload/v1493112688/babepower/drip27.jpg", "https://media.missguided.co.uk/image/upload/v1493112687/babepower/drip28.jpg", "https://media.missguided.co.uk/image/upload/v1493112687/babepower/drip29.jpg", "https://media.missguided.co.uk/image/upload/v1493112687/babepower/drip30.jpg", "https://media.missguided.co.uk/image/upload/v1493112688/babepower/drip31.jpg", "https://media.missguided.co.uk/image/upload/v1493112689/babepower/drip32.jpg", "https://media.missguided.co.uk/image/upload/v1493112690/babepower/drip33.jpg", "https://media.missguided.co.uk/image/upload/v1493112688/babepower/drip34.jpg", "https://media.missguided.co.uk/image/upload/v1493112689/babepower/drip35.jpg", "https://media.missguided.co.uk/image/upload/v1493112689/babepower/drip36.jpg"];
+
+	// TweenMax can tween any property of any object. We use this object to cycle through the array
+	var obj = {curImg: 0};
+
+	// create tween
+	var tween = TweenMax.to(obj, 0.5,
+		{
+			curImg: images.length - 1,	// animate propery curImg to number of images
+			roundProps: "curImg",				// only integers so it can be used as an array index
+			repeat: 0,					// repeat 3 times
+			immediateRender: true,			// load first image automatically
+			ease: Linear.easeNone,			// show every image the same ammount of time
+			onUpdate: function () {
+			  $j("#myimg").attr("src", images[obj.curImg]); // set the image source
+			}
+		}
+	);
+		
+	new ScrollMagic.Scene({triggerElement: "#trigger2", duration: "100%"})
+	.setTween(tween)
+	.addTo(controller);
+</script>
+
+
+<div id="trigger2b"></div>
+<a href="/babe-power-eau-de-parfum-80-ml">
+<div class="col-container mb5">
+  <div class="col"> <div id="imagesequence2"> <img id="myimg2" src="https://media.missguided.co.uk/image/upload/v1493115215/babepower/can00.jpg"><br>
+    </div> </div>
+  <div class="col">
+   <img src="https://media.missguided.co.uk/image/upload/v1493120917/babepower/img2.jpg" alt=""> 
+  </div>
+</div>
+</a>
+<script>
+// define images
+var images2  = ["https://media.missguided.co.uk/image/upload/v1493115215/babepower/can00.jpg", "https://media.missguided.co.uk/image/upload/v1493115215/babepower/can01.jpg", "https://media.missguided.co.uk/image/upload/v1493115216/babepower/can02.jpg", "https://media.missguided.co.uk/image/upload/v1493115216/babepower/can03.jpg", "https://media.missguided.co.uk/image/upload/v1493115215/babepower/can04.jpg", "https://media.missguided.co.uk/image/upload/v1493115216/babepower/can05.jpg", "https://media.missguided.co.uk/image/upload/v1493115216/babepower/can06.jpg", "https://media.missguided.co.uk/image/upload/v1493115216/babepower/can07.jpg", "https://media.missguided.co.uk/image/upload/v1493115216/babepower/can08.jpg", "https://media.missguided.co.uk/image/upload/v1493115216/babepower/can09.jpg", "https://media.missguided.co.uk/image/upload/v1493115217/babepower/can10.jpg", "https://media.missguided.co.uk/image/upload/v1493115217/babepower/can11.jpg", "https://media.missguided.co.uk/image/upload/v1493115217/babepower/can12.jpg", "https://media.missguided.co.uk/image/upload/v1493115217/babepower/can13.jpg", "https://media.missguided.co.uk/image/upload/v1493115215/babepower/can14.jpg", "https://media.missguided.co.uk/image/upload/v1493115215/babepower/can15.jpg", "https://media.missguided.co.uk/image/upload/v1493115215/babepower/can16.jpg", "https://media.missguided.co.uk/image/upload/v1493115215/babepower/can17.jpg", "https://media.missguided.co.uk/image/upload/v1493115215/babepower/can18.jpg", "https://media.missguided.co.uk/image/upload/v1493115215/babepower/can19.jpg", "https://media.missguided.co.uk/image/upload/v1493115215/babepower/can20.jpg", "https://media.missguided.co.uk/image/upload/v1493115215/babepower/can21.jpg", "https://media.missguided.co.uk/image/upload/v1493115216/babepower/can22.jpg", "https://media.missguided.co.uk/image/upload/v1493115216/babepower/can23.jpg", "https://media.missguided.co.uk/image/upload/v1493115216/babepower/can24.jpg", "https://media.missguided.co.uk/image/upload/v1493115216/babepower/can25.jpg", "https://media.missguided.co.uk/image/upload/v1493115216/babepower/can26.jpg", "https://media.missguided.co.uk/image/upload/v1493115216/babepower/can27.jpg", "https://media.missguided.co.uk/image/upload/v1493115217/babepower/can28.jpg", "https://media.missguided.co.uk/image/upload/v1493115217/babepower/can29.jpg", "https://media.missguided.co.uk/image/upload/v1493115217/babepower/can30.jpg", "https://media.missguided.co.uk/image/upload/v1493115217/babepower/can31.jpg", "https://media.missguided.co.uk/image/upload/v1493115217/babepower/can32.jpg", "https://media.missguided.co.uk/image/upload/v1493115217/babepower/can34.jpg", "https://media.missguided.co.uk/image/upload/v1493115217/babepower/can35.jpg", "https://media.missguided.co.uk/image/upload/v1493115218/babepower/can36.jpg"];
+
+	// TweenMax can tween any property of any object. We use this object to cycle through the array
+	var obj2 = {curImg: 0};
+
+	// create tween
+	var tween2 = TweenMax.to(obj2, 0.5,
+		{
+			curImg: images2.length - 1,	// animate propery curImg to number of images
+			roundProps: "curImg",				// only integers so it can be used as an array index
+			repeat: 0,					// repeat 3 times
+			immediateRender: true,			// load first image automatically
+			ease: Linear.easeNone,			// show every image the same ammount of time
+			onUpdate: function () {
+			  $j("#myimg2").attr("src", images2[obj2.curImg]); // set the image source
+			}
+		}
+	);
+		
+	new ScrollMagic.Scene({triggerElement: "#trigger2b", duration: "100%"})
+	.setTween(tween2)
+	.addTo(controller);
+</script>
+
+
+
+<section class="hide-on-mob">
+  <div id="trigger3"></div>
+
+  <img id="quote_img" src="https://media.missguided.co.uk/image/upload/v1493120917/babepower/quote_img.jpg" alt="">
+    <div id="trigger4b"></div>
+    <div class="spacer"> </div>
+   <p id="commands">the babe commandments</p>
+  <div id="trigger4"></div>
+  <div id="trigger5"></div>
+  <div id="trigger6"></div>
+  <div id="trigger7"></div>
+  <div id="trigger8"></div>
+  <div id="trigger9"></div>
+  <div id="trigger10"></div>
+  <div id="trigger11"></div>
+  <div id="trigger12"></div>
+  <div id="trigger13"></div>
+  <div id="trigger14"></div>
+  <div id="trigger15"></div>
+  	<div id="quotes">
+    	<h2> <span class="quote" id="be"><span class="decimal">01_</span>be hot but humble</span> <span class="quote" id="filter"> <span class="decimal">02_</span>filter out the f*ck boys</span> <span class="quote" id="live"><span class="decimal">03_</span>live life with highlighter</span> <span class="quote" id="ignore"><span class="decimal">04_</span>ignore the bank balance</span> <span class="quote" id="slay"><span class="decimal">05_</span>slay the selfie</span> <span class="quote" id="where"><span class="decimal">06_</span>wear the attitude</span> <span class="quote" id="find"><span class="decimal">07_</span>find the bar wherever you are</span> <span class="quote" id="support"><span class="decimal">08_</span>support your local girl gang</span> <span class="quote" id="make"><span class="decimal">09_</span>make every outfit count</span> <span class="quote" id="boss"><span class="decimal">10_</span>be a boss babe</span> </h2>
+  	</div>
+</section>
+<div class="hide-on-desk">
+	<img src="https://media.missguided.co.uk/image/upload/v1493139575/babepower/q2.gif" alt="">
+	
+</div>
+<script>
+new ScrollMagic.Scene({triggerElement: "#trigger3", offset: 250 })
+	.setPin("#quote_img")
+    .addTo(controller); // assign the scene to the controller		
+</script> 
+<script>
+	var title = $j('#commands');
+	
+	var quotes = $j('#quotes');
+	
+	var $be = $j('#be');
+	var $filter = $j('#filter');
+	var $live = $j('#live');
+	var $ignore = $j('#ignore');
+	var $slay = $j('#slay');
+	var $where = $j('#where');
+	var $find = $j('#find');
+	var $support = $j('#support');
+	var $make = $j('#make');
+	var $boss = $j('#boss');
+
+		// build tween
+	var tweentitle = new TimelineMax().fromTo(title, .25, {css: {top: "-50px", opacity: 0, ease: Power2.easeInOut}}, {css:{top:"7%", opacity: 1, ease: Power2.easeInOut}} )
+	
+	// build tween
+	var tweenchain1 = new TimelineMax().to($be, .5, {
+		opacity: 1
+	});
+	
+	
+	var tweenchain2 = new TimelineMax().to($filter, .5, {
+		opacity: 1,
+		onComplete: function () {document.getElementById("be").style.opacity = "0";}
+	});
+
+	
+	var tweenchain3 = new TimelineMax().to($live, .5, {
+		opacity: 1,
+		onComplete: function () {document.getElementById("filter").style.opacity = "0";}
+	});
+
+	
+	var tweenchain4 = new TimelineMax().to($ignore, .5, {
+		opacity: 1,
+		onComplete: function () {document.getElementById("live").style.opacity = "0";}
+	});
+
+	
+	var tweenchain5 = new TimelineMax().to($slay, .5, {
+		opacity: 1,
+		onComplete: function () {document.getElementById("ignore").style.opacity = "0";}
+	});
+
+	
+	var tweenchain6 = new TimelineMax().to($where, .5, {
+		opacity: 1,
+		onComplete: function () {document.getElementById("slay").style.opacity = "0";}
+	});
+
+	
+	var tweenchain7 = new TimelineMax().to($find, .5, {
+		opacity: 1,
+		onComplete: function () {document.getElementById("where").style.opacity = "0";}
+	});
+
+	
+	var tweenchain8 = new TimelineMax().to($support, .5, {
+		opacity: 1,
+		onComplete: function () {document.getElementById("find").style.opacity = "0";}
+		
+	});
+
+	
+	var tweenchain9 = new TimelineMax().to($make, .5, {
+		opacity: 1,
+		onComplete: function () {document.getElementById("support").style.opacity = "0";}
+	});
+	
+	var tweenchain10 = new TimelineMax().to($boss, .5, {
+		opacity: 1,
+		onComplete: function () {document.getElementById("make").style.opacity = "0";}
+	});
+	
+	var tweenchain11 = new TimelineMax().to($boss, .5, {
+		opacity: 0,
+		ease: Power1.easeInOut,
+		
+	});
+	
+		var tweenchain12 = new TimelineMax().to(quotes, .5, {
+		opacity: 0,
+		ease: Power1.easeInOut,
+		onComplete: function () {
+			document.getElementById("commands").style.opacity = "0";document.getElementById("boss").style.opacity = "0";document.getElementById("quote_img").style.opacity = "0";console.log("all quotes done");
+		},
+			onReverseComplete: function () {
+			document.getElementById("commands").style.opacity = "1";document.getElementById("boss").style.opacity = "0.2";document.getElementById("quote_img").style.opacity = "1";
+		}
+	});
+	
+
+	
+	
+	// build scene
+new ScrollMagic.Scene({triggerElement: "#trigger4b",  offset: 10})
+				.setTween(tweentitle)
+				.addTo(controller)
+
+	
+new ScrollMagic.Scene({triggerElement: "#trigger4", offset: 0, duration: 100})
+				.setTween(tweenchain1)
+				.addTo(controller)
+
+
+new ScrollMagic.Scene({triggerElement: "#trigger5", offset: 150, duration: 100})
+				.setTween(tweenchain2)
+				.addTo(controller)
+
+
+new ScrollMagic.Scene({triggerElement: "#trigger6", offset: 350, duration: 100})
+				.setTween(tweenchain3)
+				.addTo(controller)
+
+
+new ScrollMagic.Scene({triggerElement: "#trigger7", offset: 450, duration: 100})
+				.setTween(tweenchain4)
+				.addTo(controller)
+
+
+new ScrollMagic.Scene({triggerElement: "#trigger8", offset: 550, duration: 100})
+				.setTween(tweenchain5)
+				.addTo(controller)
+
+
+new ScrollMagic.Scene({triggerElement: "#trigger9", offset: 650, duration: 100})
+				.setTween(tweenchain6)
+				.addTo(controller)
+
+
+new ScrollMagic.Scene({triggerElement: "#trigger10", offset: 750, duration: 100})
+				.setTween(tweenchain7)
+				.addTo(controller)
+
+
+new ScrollMagic.Scene({triggerElement: "#trigger11", offset: 900, duration: 100})
+				.setTween(tweenchain8)
+				.addTo(controller)
+
+
+new ScrollMagic.Scene({triggerElement: "#trigger12", offset: 1050, duration: 100})
+				.setTween(tweenchain9)
+				.addTo(controller)
+
+new ScrollMagic.Scene({triggerElement: "#trigger13", offset: 1200, duration: 100})
+				.setTween(tweenchain10)
+				.addTo(controller)
+
+new ScrollMagic.Scene({triggerElement: "#trigger14", offset: 1350, duration: 150})
+				.setTween(tweenchain11)
+				.addTo(controller)
+
+new ScrollMagic.Scene({triggerElement: "#trigger15", offset: 1600, duration: 50})
+				.setTween(tweenchain12)
+				.addTo(controller)
+
+
+
+</script>
+<div class="spacer hide-on-mob"> </div>
+  <a href="/babe-power-eau-de-parfum-80-ml">
+<div class="col-container">
+  <div class="col"> <img src="https://media.missguided.co.uk/image/upload/v1493120917/babepower/img3.jpg" alt=""> </div>
+  <div class="col"> <img src="https://media.missguided.co.uk/image/upload/v1493120917/babepower/img4.jpg" alt=""> </div>
+</div>
+<div>
+<img src="https://media.missguided.co.uk/image/upload/v1493141062/babepower/IMG7.jpg" alt="">
+</div>
+<div class="col-container">
+  <div class="col"> <img src="https://media.missguided.co.uk/image/upload/v1493120917/babepower/img5.jpg" alt=""> </div>
+  <div class="col"> <img src="https://media.missguided.co.uk/image/upload/v1493120917/babepower/img6.jpg" alt=""> </div>
+</div>
+
+ <div class="col-container">
+
+    <button class="button">shop now</button>
+
+</div>
+</a>
+<script>
+$j(function(){
+	
+	//preload animation arrays
+	
+	function preloadImages(srcs) {
+    function loadImage(src) {
+        return new Promise(function(resolve, reject) {
+            var img = new Image();
+            img.onload = function() {
+                resolve(img);
+            };
+            img.onerror = img.onabort = function() {
+                reject(src);
+            };
+            img.src = src;
+        });
+    }
+    var promises = [];
+    for (var i = 0; i < srcs.length; i++) {
+        promises.push(loadImage(srcs[i]));
+    }
+    return Promise.all(promises);
+}
+	preloadImages(images).then(function(imgs) {
+    // all images are loaded now and in the array imgs
+		console.log("img done")
+			preloadImages(images2).then(function(imgs) {
+    // all images are loaded now and in the array imgs
+		console.log("img2 done")
+		
+}, function(errImg) {
+    // at least one image failed to load
+		console.log("img2 failed")
+});
+		
+}, function(errImg) {
+    // at least one image failed to load
+		console.log("img failed")
+});
+
+	//smooth scroll
+
+    var wwindow = $j(window);
+	var scrollTime = 1;
+	var scrollDistance = 100;
+
+	wwindow.on("mousewheel DOMMouseScroll", function(event){
+
+		event.preventDefault();	
+
+		var delta = event.originalEvent.wheelDelta/120 || -event.originalEvent.detail/3;
+		var scrollTop = wwindow.scrollTop();
+		var finalScroll = scrollTop - parseInt(delta*scrollDistance);
+
+		TweenMax.to(wwindow, scrollTime, {
+			scrollTo : { y: finalScroll, autoKill:true },
+				ease: Power1.easeOut,
+				overwrite: 5							
+			});
+
+	});
+});
+$j(window).load(function(){
+	$j('#preloader').fadeOut('1000',function(){$j(this).remove();});
+});
+</script> 
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script> -->
