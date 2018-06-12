@@ -40,7 +40,6 @@ body {
   // background: $pink;
   background: url('https://media.missguided.co.uk/image/upload/w_600/v1528805931/smoke1_tedvf5.jpg') top;
   background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .clouds {
@@ -98,7 +97,8 @@ body {
       padding: 20px;
       flex: 1 0 300px;
       max-width: 50%;
-      h1 {
+      h1,
+      h2 {
         font-size: 50px;
         margin-bottom: .5em;
       }
@@ -117,13 +117,58 @@ body {
   }
 }
 
+@media (min-width: 768px) {
+  body {
+    // background: $pink;
+    background: url('https://media.missguided.co.uk/image/upload/w_600/v1528805931/smoke1_tedvf5.jpg') top;
+    background-size: 300% 300%;
+    background-repeat: no-repeat;
+    -webkit-animation: fader 120s linear infinite;
+    -moz-animation: fader 120s linear infinite;
+    animation: fader 120s linear infinite;
+  }
+  @-webkit-keyframes fader {
+    0% {
+      background-position: 51% 0%
+    }
+    50% {
+      background-position: 50% 100%
+    }
+    100% {
+      background-position: 51% 0%
+    }
+  }
+  @-moz-keyframes fader {
+    0% {
+      background-position: 51% 0%
+    }
+    50% {
+      background-position: 50% 100%
+    }
+    100% {
+      background-position: 51% 0%
+    }
+  }
+  @keyframes fader {
+    0% {
+      background-position: 51% 0%
+    }
+    50% {
+      background-position: 50% 100%
+    }
+    100% {
+      background-position: 51% 0%
+    }
+  }
+}
+
 @media (max-width: 768px) {
   body {
-    background-image: url('https://media.missguided.co.uk/image/upload/w_600/v1528805930/smoke2_fyabde.jpg');
-    background-color: #D65582;
-    background-position: top center;
-    background-size: 100%;
-    background-repeat: repeat-y;
+    background-color: #FC8CC3;
+    background-repeat: no-repeat;
+    background-size: 155%;
+    background-position: top;
+    background-attachment: fixed;
     background-blend-mode: soft-light;
   }
   .clouds {
@@ -131,6 +176,7 @@ body {
       flex: 600px;
       max-width: 100%;
       margin: 10px 0; // background: rgba(255, 255, 255, .05);
+      h1,
       h2 {
         font-size: 10vw;
       }
@@ -142,6 +188,34 @@ body {
       &.and {
         max-width: 60%;
       }
+    }
+  }
+}
+
+@media (min-width: 2200px) {
+  .clouds {
+    .flex {
+      max-width: 1800px;
+      .slot {
+        h1,
+        h2 {
+          font-size: 100px;
+        }
+      }
+    }
+    h3 {
+      font-size: 60px;
+      &.intro {
+        max-width: 70%;
+        margin: 0 auto 3em;
+      }
+    }
+    p {
+      font-size: 30px;
+      margin-bottom: 2em;
+    }
+    button.cta {
+      font-size: 30px;
     }
   }
 }
